@@ -3,82 +3,97 @@ set -eu
 
 #
 # Application installer (via brew-cask)
-#
+# #- denotes an app I have from AppStore
 
 # Apps
 apps=(
-  shimo
   1password
+#-acorn
+  airfoil
   alfred
-  dropbox
-  google-chrome
-  qlcolorcode
-  screenflick
-  slack
-  transmit
   appcleaner
-  firefox
-  hazel
-  qlmarkdown
-  seil
-  spotify
-  vagrant
-  arq
-  flash
-  iterm2
-  qlprettypatch
-  shiori
-  sublime-text3
-  virtualbox
   atom
-  flux
+  backblaze
+  bartender
+# boot2docker
+# boot2docker-status
+#-caffeine
+#-daisydisk
+  dayone-cli
+  dropbox
+  droplr
+  duet
+#-evernote
+#-fantastical
+  google-chrome
+  google-drive
+  google-earth
+  google-earth-web-plugin
+  google-nik-collection
+  hazel
+  intellij-idea-ce
+  istat-menus
+  java
+#-kindle
+  kitematic
+  little-snitch
+  logitech-control-center
   mailbox
-  qlstephen
-  sketch
-  tower
-  vlc
-  cloudup
+  moom
+  mysqlworkbench
+  name-mangler
   nvalt
+  omnigraffle
+# opendns-updater
+#-pdfpen
+  qlcolorcode
+  qlgradle
+  qlimagesize
+  qlmarkdown
+  qlprettypatch
+  qlstephen
   quicklook-json
+  rdio
+# screens-connect
+# shimo
+  shiori
+  silverlight
+#-slack
+#-sketch
   skype
-  transmission
-  apikitchen
-  mamp
+#-soulver
+  sublime-text
+#-textexpander
+  transmit
+# valentina-studio
+  ynab
 )
 
 # fonts
 fonts=(
-  font-m-plus
-  font-clear-sans
-  font-roboto
+  font-bitter
+  font-lato
+  font-source-code-pro
+  font-source-sans-pro
 )
 
 # Atom packages
 atom=(
   advanced-railscasts-syntax
   atom-beautify
-  cmd-9
-  color-picker
-  css-comb
-  docblockr
-  easy-motion
-  editor-stats
-  emmet
-  fancy-new-file
+  autocomplete-plus
   file-icons
+  fizzy
   git-history
   highlight-selected
-  image-view
-  inc-dec-value
-  key-peek
-  language-jade
+  language-groovy
   linter
   markdown-preview
   merge-conflicts
-  neutron-ui
-  npm-install
-  react
-  vim-mode
+  monokai
+  sort-lines
+  Sublime-Style-Column-Selection
+  yosemite-unity-ui
   zentabs
 )
 
@@ -119,8 +134,10 @@ main() {
   echo "installing atom plugins..."
   apm install ${atom[@]}
 
-  # link with alfred
-  alfred
+  # install gvm
+  echo "installing gvm tools..."
+  curl -s get.gvmtool.net | bash
+
   cleanup
 }
 
