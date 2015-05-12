@@ -88,7 +88,6 @@ atom=(
   highlight-selected
   language-groovy
   linter
-  markdown-preview
   merge-conflicts
   monokai
   sort-lines
