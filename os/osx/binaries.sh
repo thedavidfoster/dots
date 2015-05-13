@@ -34,7 +34,6 @@ binaries=(
   fish
   git
   graphicsmagick
-  heroku-toolbelt
   htop-osx
   imagemagick
   mackup

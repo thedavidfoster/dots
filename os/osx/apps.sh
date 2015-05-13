@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+brew #!/usr/bin/env bash
 set -eu
 
 #
@@ -31,6 +31,7 @@ apps=(
   google-earth-web-plugin
   google-nik-collection
   hazel
+  heroku-toolbelt
   intellij-idea-ce
   istat-menus
   java
