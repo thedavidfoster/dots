@@ -15,7 +15,7 @@ sudo cp -R $dirname "$lib/"
 
 # remove existing bin if it exists
 if [ -e "$bin/dots" ]; then
-  rm "$bin/dots"
+  sudo rm "$bin/dots"
 fi
 
 # symlink dots
