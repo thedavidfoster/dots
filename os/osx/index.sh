@@ -15,11 +15,15 @@ fi
 osx="$os/osx"
 
 # Run each program
+echo "starting to install defaults..."
 sh "$osx/defaults.sh"
-echo "done with defaults"
+echo "...done with defaults"
+echo "starting to install binaries..."
 sh "$osx/binaries.sh"
-echo "done with binaries"
+echo "...done with binaries"
+echo "starting to install apps..."
 sh "$osx/apps.sh"
+echo "...done with apps"
 
 # install oh-my-fish
 curl -L https://github.com/bpinto/oh-my-fish/raw/master/tools/install.fish | fish
@@ -28,9 +32,12 @@ curl -L https://github.com/bpinto/oh-my-fish/raw/master/tools/install.fish | fis
 echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
 
-# running Mackup restore
-echo "Mackup restoring..."
-mackup restore
+#Post install instructions
+echo "To complete full setup:"
+echo "1. Open Dropbox and login to your account."
+echo "2. Wait until syncing is completed."
+echo "3. Run 'mackup restore'."
+echo "4. Reboot Mac."
 
 # Symlink the profile
 # disabled because I am using Mackup
