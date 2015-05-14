@@ -113,8 +113,7 @@ main() {
 
   # Install homebrew-cask
   echo "installing cask..."
-  brew tap phinze/homebrew-cask
-  brew install brew-cask
+  brew install caskroom/cask/brew-cask
 
   # Tap alternative versions
   brew tap caskroom/versions
