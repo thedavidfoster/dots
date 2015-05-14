@@ -137,6 +137,11 @@ main() {
   echo "installing gvm tools..."
   curl -s get.gvmtool.net | bash
 
+  # Add osx specific command line tools
+  if test ! $(which subl); then
+    ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+  fi
+
   cleanup
 }
 
