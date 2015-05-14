@@ -19,7 +19,7 @@ if [ -e "$bin/dots" ]; then
 fi
 
 # symlink dots
-ln -s "$lib/dots/dots.sh" "$bin/dots"
+sudo ln -s "$lib/dots/dots.sh" "$bin/dots"
 
 # Ubuntu-only: Change from dash to bash
 if [ "$BASH_VERSION" = '' ]; then
