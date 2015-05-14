@@ -16,7 +16,9 @@ osx="$os/osx"
 
 # Run each program
 sh "$osx/defaults.sh"
+echo "done with defaults"
 sh "$osx/binaries.sh"
+echo "done with binaries"
 sh "$osx/apps.sh"
 
 # install oh-my-fish
